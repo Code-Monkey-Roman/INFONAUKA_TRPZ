@@ -33,8 +33,6 @@ public class PresentationService {
         return pageOfPresentations;
     }
 
-
-
     public Presentation savePresentation(Presentation presentation) {
         return presentationRepository.save(presentation);
     }

@@ -3,6 +3,7 @@ package com.barchuk.springbootinfoscience.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -27,4 +28,15 @@ public class Organization {
     @Column(name = "adress", nullable=false)
     private String location;
 
+    public Organization(Long id, String orgName, int payment, String dirName, String accName, String location) {
+        this.id = id;
+        this.orgName = orgName;
+        this.payment = payment;
+        this.dirName = dirName;
+        this.accName = accName;
+        this.location = location;
+    }
+
+    public Organization() {
+    }
 }
